@@ -1,0 +1,23 @@
+language: php
+dist: bionic
+
+php:
+  - "7.2"
+  - "7.3"
+  - "7.4snapshot"
+
+install: travis_retry composer update --prefer-lowest --prefer-dist
+
+before_script:
+  - phpenv config-rm xdebug.ini
+
+script:
+  - make --keep-going tests-unit cs-checks static-analysis
+
+jobs:
+  allow_failures:
+    - php: 7.4snapshot
+
+cache:
+  directories:
+    - $HOME/.composer/cache

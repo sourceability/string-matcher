@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ruleset>
+    <file>src/</file>
+
+    <arg name="basepath" value="."/>
+    <arg name="cache" value="./var/phpcs-cache"/>
+    <arg name="colors"/>
+    <arg name="extensions" value="php"/>
+    <arg name="parallel" value="4"/>
+
+    <rule ref="vendor/sourceability/coding-standard"></rule>
+
+    <rule ref="Generic.Files.LineLength"></rule>
+
+</ruleset>

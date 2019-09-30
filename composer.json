@@ -1,0 +1,42 @@
+{
+    "name": "sourceability/string-matcher",
+    "description": "A library which makes it easy to use multiple approaches to find the best matching string",
+    "autoload": {
+        "psr-4": {
+            "Sourceability\\StringMatcher\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sourceability\\StringMatcher\\Tests\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/sourceability/coding-standard",
+            "no-api": true
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "beberlei/assert": "^3.2",
+        "lstrojny/functional-php": "^1.9",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "kjantzer/liquidmetal-php": "v1.3.0.1",
+        "phpstan/phpstan-beberlei-assert": "^0.11",
+        "phpstan/phpstan-deprecation-rules": "^0.11",
+        "phpunit/phpunit": "^8.2",
+        "sourceability/coding-standard": "^1.0@dev",
+        "thecodingmachine/phpstan-strict-rules": "^0.11",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+        "squizlabs/php_codesniffer": "^3.3.1"
+    },
+    "suggest": {
+        "kjantzer/liquidmetal-php": "v1.3.0.1"
+    },
+    "type": "library",
+    "license": "MIT"
+}

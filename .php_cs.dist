@@ -1,0 +1,26 @@
+<?php
+
+$finder = PhpCsFixer\Finder::create()
+    ->in([
+        __DIR__ . '/src',
+        __DIR__ . '/tests',
+        __DIR__ . '/examples',
+    ])
+    ->exclude([
+        'Lib/PHPStan/Rules/data'
+    ])
+;
+
+$config = Sourceability\CodingStandard\PhpCsFixerConfig::create()
+    ->setFinder($finder)
+    ->setRiskyAllowed(true)
+    ->setUsingCache(true)
+    ->setCacheFile(__DIR__ . '/var/phpcsfixer')
+;
+
+$config->setRules(array_merge($config->getRules(), [
+    'no_superfluous_phpdoc_tags' => false,
+    'declare_strict_types' => true,
+]));
+
+return $config;
