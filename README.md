@@ -6,6 +6,7 @@
 
 <div align="center">
 
+  [![Packagist](https://img.shields.io/packagist/v/sourceability/string-matcher)](https://packagist.org/packages/sourceability/string-matcher)
   [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
   [![Build Status](https://travis-ci.org/sourceability/string-matcher.svg?branch=master)](https://travis-ci.org/sourceability/string-matcher)
   [![GitHub Issues](https://img.shields.io/github/issues/sourceability/string-matcher.svg)](https://github.com/sourceability/string-matcher/issues)
@@ -22,12 +23,14 @@
 
 ### Prerequisites
 
-- PHP 7.3 or higher
+- PHP 7.2 or higher
 - [LiquidMetal](https://github.com/kjantzer/liquidmetal-php) if you want to use the LiquidMetal Matcher
 
 ## 🏁 Getting Started
 
-More documentation coming soon.
+```
+composer require sourceability/string-matcher
+```
 
 You can see examples of how to use this project in the [examples](/examples) directory.
 
