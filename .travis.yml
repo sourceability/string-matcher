@@ -1,22 +1,19 @@
 language: php
-dist: bionic
+dist: focal
 
 php:
-  - "7.2"
-  - "7.3"
-  - "7.4snapshot"
+  - 7.2
+  - 7.3
+  - 7.4
+  - 8.0
 
-install: travis_retry composer update --prefer-lowest --prefer-dist
+install: travis_retry composer update --prefer-dist --no-interaction --no-progress --ignore-platform-req=php --with-all-dependencies
 
 before_script:
   - phpenv config-rm xdebug.ini
 
 script:
   - make --keep-going tests-unit cs-checks static-analysis
-
-jobs:
-  allow_failures:
-    - php: 7.4snapshot
 
 cache:
   directories:

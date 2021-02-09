@@ -19,23 +19,18 @@
         }
     ],
     "require": {
-        "php": "^7.2",
+        "php": ">=7.2",
         "beberlei/assert": "^3.2",
         "lstrojny/functional-php": "^1.9",
         "ext-mbstring": "*"
     },
     "require-dev": {
-        "kjantzer/liquidmetal-php": "v1.3.0.1",
-        "phpstan/phpstan-beberlei-assert": "^0.11",
-        "phpstan/phpstan-deprecation-rules": "^0.11",
-        "phpunit/phpunit": "^8.2",
+        "phpstan/phpstan-beberlei-assert": "^0.12",
+        "phpstan/phpstan-deprecation-rules": "^0.12",
+        "phpunit/phpunit": "^8.5",
         "sourceability/coding-standard": "^1.0@dev",
-        "thecodingmachine/phpstan-strict-rules": "^0.11",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
-        "squizlabs/php_codesniffer": "^3.3.1"
-    },
-    "suggest": {
-        "kjantzer/liquidmetal-php": "v1.3.0.1"
+        "sourceability/phpstan-rules": "dev-master",
+        "thecodingmachine/phpstan-strict-rules": "^0.12"
     },
     "type": "library",
     "license": "MIT"

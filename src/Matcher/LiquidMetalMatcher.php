@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Sourceability\StringMatcher\Matcher;
 
-use LiquidMetal;
 use Sourceability\StringMatcher\Simplifier\SimplifierInterface;
+use Sourceability\StringMatcher\Strategy\LiquidMetal;
 use function mb_strlen;
 use function trim;
 

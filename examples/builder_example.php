@@ -9,6 +9,8 @@ use Sourceability\StringMatcher\Simplifier\AlphanumericSimplifier;
 use Sourceability\StringMatcher\Simplifier\ChainSimplifier;
 use Sourceability\StringMatcher\Simplifier\TrimmedLowercaseSimplifier;
 use Sourceability\StringMatcher\ValuesMatcherBuilder;
+use const PHP_EOL;
+use function print_r;
 
 $chainSimplifier = new ChainSimplifier([
     new TrimmedLowercaseSimplifier(),
