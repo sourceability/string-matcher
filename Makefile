@@ -24,3 +24,15 @@ tests-unit:
 
 bash: ## Starts a bash session in the php container
 	docker-compose exec php /bin/sh
+
+docker-up: ## Start Docker containers
+	docker-compose up --detach
+
+docker-up-build: ## Re-build and Start Docker containers
+	docker-compose up --detach --build --force-recreate --remove-orphans
+
+docker-down: ## Stop and remove Docker containers
+	docker-compose down --remove-orphans
+
+docker-logs: ## View output from docker containers
+	docker-compose logs --follow
