@@ -128,14 +128,14 @@ class LiquidMetal
         }
 
         // consume current char to match
-        $c = $abbrev[$abbrIndex];
+        $char = $abbrev[$abbrIndex];
         ++$abbrIndex;
 
         // cancel match if a character is missing
         if ($searchIndex < 0) {
-            $index = mb_strpos($search, $c, 0);
+            $index = mb_strpos($search, $char, 0);
         } else {
-            $index = mb_strpos($search, $c, $searchIndex);
+            $index = mb_strpos($search, $char, $searchIndex);
         }
 
         if (false === $index) {
@@ -144,7 +144,7 @@ class LiquidMetal
 
         // match all instances of the $abbreviaton char
         $scoreIndex = $searchIndex; // score section to update
-        while ($index = mb_strpos($search, $c, $searchIndex + 1)) {
+        while (false !== $index = mb_strpos($search, $char, $searchIndex + 1)) {
             // score this match according to context
             if (self::isNewWord($string, $index)) {
                 $scores[$index - 1] = 1;
@@ -154,6 +154,7 @@ class LiquidMetal
             } else {
                 self::fillArray($scores, self::$SCORE_NO_MATCH, $scoreIndex + 1, $index);
             }
+
             $scores[$index] = self::$SCORE_MATCH;
 
             // consume matched $string and continue $search
