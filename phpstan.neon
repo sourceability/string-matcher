@@ -5,11 +5,10 @@ includes:
     - vendor/phpstan/phpstan-beberlei-assert/extension.neon
     - vendor/phpstan/phpstan-deprecation-rules/rules.neon
 
-
 rules:
-    - Sourceability\CodingStandard\PHPStan\Rules\ConstantBooleanIdenticalRule
-    - Sourceability\CodingStandard\PHPStan\Rules\ConstantBooleanNotIdenticalRule
-    - Sourceability\CodingStandard\PHPStan\Rules\InstanceOfVsNotNullRule
+    - Sourceability\PHPStan\Rules\ConstantBooleanIdenticalRule
+    - Sourceability\PHPStan\Rules\ConstantBooleanNotIdenticalRule
+    - Sourceability\PHPStan\Rules\InstanceOfVsNotNullRule
 
     # vendor/phpstan/phpstan-strict-rules/rules.neon
     - PHPStan\Rules\BooleansInConditions\BooleanInBooleanAndRule
@@ -37,7 +36,7 @@ rules:
     - PHPStan\Rules\SwitchConditions\MatchingTypeInSwitchCaseConditionRule
 
 services:
-    - class: Sourceability\CodingStandard\PHPStan\Rules\ConstantBooleanRuleHelper
+    - class: Sourceability\PHPStan\Rules\ConstantBooleanRuleHelper
 
     - class: PHPStan\Rules\BooleansInConditions\BooleanRuleHelper
     - class: PHPStan\Rules\Operators\OperatorRuleHelper
@@ -45,14 +44,6 @@ services:
     # vendor/thecodingmachine/phpstan-strict-rules/phpstan-strict-rules.neon
     -
         class: TheCodingMachine\PHPStan\Rules\Exceptions\ThrowMustBundlePreviousExceptionRule
-        tags:
-            - phpstan.rules.rule
-    -
-        class: TheCodingMachine\PHPStan\Rules\TypeHints\MissingTypeHintInFunctionRule
-        tags:
-            - phpstan.rules.rule
-    -
-        class: TheCodingMachine\PHPStan\Rules\TypeHints\MissingTypeHintInMethodRule
         tags:
             - phpstan.rules.rule
     -

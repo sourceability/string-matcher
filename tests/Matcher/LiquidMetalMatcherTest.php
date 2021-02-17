@@ -9,7 +9,7 @@ use Sourceability\StringMatcher\Matcher\LiquidMetalMatcher;
 use Sourceability\StringMatcher\Matcher\MatcherInterface;
 use Sourceability\StringMatcher\Simplifier\SimplifierInterface;
 
-class LiquidMetalMatcherTest extends AbstractMatcherTest
+final class LiquidMetalMatcherTest extends AbstractMatcherTest
 {
     public function getTestMatchData(): \Iterator
     {

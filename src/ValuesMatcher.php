@@ -79,9 +79,7 @@ class ValuesMatcher
             $score = 0;
             foreach ($this->matchersByWeight as $weight => $matchers) {
                 foreach ($matchers as $matcher) {
-                    $score += (
-                        $matcher->score($value, $possibleMatch) * $weight
-                    );
+                    $score += $matcher->score($value, $possibleMatch) * $weight;
                 }
             }
 

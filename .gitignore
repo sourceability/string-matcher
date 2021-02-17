@@ -2,4 +2,8 @@ vendor
 composer.lock
 var/*
 !var/.gitkeep
+!var/log
+!var/log/.gitkeep
+var/log/xdebug.log
 .phpunit.result.cache
+.idea
