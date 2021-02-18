@@ -24,7 +24,6 @@
 ### Prerequisites
 
 - PHP 7.2 or higher
-- [LiquidMetal](https://github.com/kjantzer/liquidmetal-php) if you want to use the LiquidMetal Matcher
 
 ## 🏁 Getting Started
 
@@ -59,3 +58,8 @@ make static-analysis
 ## ✍️ Authors
 
 See the list of [contributors](https://github.com/sourceability/string-matcher/contributors) who participated in this project.
+
+### LiquidMetal Algorithm Originators
+- Ryan McGeary [LiquidMetal-JS](https://github.com/rmm5t/liquidmetal)
+- Kevin Jantzer [LiquidMetal-PHP](https://github.com/kjantzer/liquidmetal-php)
+
