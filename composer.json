@@ -20,7 +20,7 @@
     ],
     "require": {
         "php": ">=7.2",
-        "beberlei/assert": "^3.2",
+        "beberlei/assert": ">=2.0",
         "lstrojny/functional-php": "^1.9",
         "ext-mbstring": "*"
     },
